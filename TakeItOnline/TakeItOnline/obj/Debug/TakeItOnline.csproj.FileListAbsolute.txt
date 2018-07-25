@@ -1,0 +1,2 @@
+C:\GitHub\Outlook-add-in-integration-with-StackOverflow\TakeItOnline\TakeItOnline\obj\Debug\TakeItOnline.csprojAssemblyReference.cache
+C:\GitHub\Outlook-add-in-integration-with-StackOverflow\TakeItOnline\TakeItOnline\obj\Debug\TakeItOnline.csproj.CoreCompileInputs.cache
