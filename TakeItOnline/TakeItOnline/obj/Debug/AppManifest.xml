@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <App xmlns="http://schemas.microsoft.com/sharepoint/2012/app/manifest"
      Name="TakeItOnline"
-     ProductID="{7e4549e8-8762-4bf4-b39f-124e6e5932dc}"
+     ProductID="{85001da2-a1b2-4c88-80fa-4baed18313ad}"
      Version="1.0.0.0"
      SharePointMinVersion="15.0.0.0"
 >
