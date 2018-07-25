@@ -7,12 +7,10 @@
     Office.initialize = function (reason) {
         $(document).ready(function () {
             $("#getMessage").click(() => tryCatch(loadMessage));
-
+            $("#getUser").click(() => tryCatch(getUser));
         });
     };
-
-    // Load properties from the Item base object, then load the
-    // message-specific properties.
+    
     async function loadMessage() {
         var item = Office.context.mailbox.item;
         var readMessageItem = item as Office.MessageRead;
@@ -21,6 +19,15 @@
             $('#message').text(result.value);
         });
     }
+
+    async function getUser() {
+        Office.context.ui.displayDialogAsync(window.location.origin + "/Dialog.html");
+    }
+
+    async function dialogCallback() {
+
+    }
+
 
     /** Default helper for invoking an action and handling errors. */
     async function tryCatch(callback) {

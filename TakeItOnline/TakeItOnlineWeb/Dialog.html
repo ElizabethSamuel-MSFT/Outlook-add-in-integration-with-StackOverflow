@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<!-- Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license.
+4  See LICENSE in the project root for license information -->
+
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.1.min.js"></script>
+    <script type='text/javascript' src='https://api.stackexchange.com/js/2.0/all.js'></script>
+
+    <!-- For the Office UI Fabric, go to http://aka.ms/office-ui-fabric to learn more. -->
+    <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/2.1.0/fabric.min.css">
+    <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/2.1.0/fabric.components.min.css">
+    <script>
+        Office.initialize = function () {
+            $('#button1').click(seTest);
+            SE.init({
+                // Parameters obtained by registering an app, these are specific to the SE
+                //   documentation site
+                clientId: 1,
+                key: 'U4DMV*8nvpm3EOpvf69Rxw((',
+                // Used for cross domain communication, it will be validated
+                channelUrl: 'https://api.stackexchange.com/docs/proxy',
+                // Called when all initialization is finished
+                complete: function (data) {
+                    $('#login-button')
+                        .removeAttr('disabled')
+                        .text('Run Example With Version ' + data.version);
+                }
+            });
+        };
+
+        function seTest() {
+            // Make the authentication call, note that being in an onclick handler
+            //   is important; most browsers will hide windows opened without a
+            //   'click blessing'
+            SE.authenticate({
+                success: function (data) {
+                    alert(
+                        'User Authorized with account id = ' +
+                        data.networkUsers[0].account_id + ', got access token = ' +
+                        data.accessToken
+                    );
+                },
+                error: function (data) {
+                    alert('An error occurred:\n' + data.errorName + '\n' + data.errorMessage);
+                },
+                networkUsers: true
+            });
+        }
+    </script>
+</head>
+<body>
+    <p class="ms-font-xxl ms-fontColor-neutralSecondary ms-fontWeight-semilight">Stack Exchange</p>
+    <button class="ms-Button ms-Button--primary" id="button1">
+        <span class="ms-Button-icon"><i class="ms-Icon ms-Icon--plus"></i></span>
+        <span class="ms-Button-label" id="button1-text">1</span>
+        <span class="ms-Button-description" id="button1-desc">Number 1</span>
+    </button>
+</body>
+</html>

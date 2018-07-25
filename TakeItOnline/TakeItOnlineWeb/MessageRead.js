@@ -39,10 +39,9 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     Office.initialize = function (reason) {
         $(document).ready(function () {
             $("#getMessage").click(function () { return tryCatch(loadMessage); });
+            $("#getUser").click(function () { return tryCatch(getUser); });
         });
     };
-    // Load properties from the Item base object, then load the
-    // message-specific properties.
     function loadMessage() {
         return __awaiter(this, void 0, void 0, function () {
             var item, readMessageItem;
@@ -59,6 +58,21 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
                         _a.sent();
                         return [2 /*return*/];
                 }
+            });
+        });
+    }
+    function getUser() {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                Office.context.ui.displayDialogAsync(window.location.origin + "/Dialog.html");
+                return [2 /*return*/];
+            });
+        });
+    }
+    function dialogCallback() {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/];
             });
         });
     }
