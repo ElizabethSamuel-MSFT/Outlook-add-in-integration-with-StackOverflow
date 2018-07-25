@@ -25,33 +25,15 @@
     <!-- link rel="stylesheet" href="Content/fabric.components.min.css" -->
 </head>
 <body>
-    <div id="content-main" class="ms-Grid">
-        <div class="ms-Grid-row">
-            <div class="ms-Grid-col ms-u-sm12">
-                <button id="getMessage" class="ms-font-l">Get Message</button>
-                <span id="message" class="ms-Table-cell"></span>
-            </div>
-        </div>
-        <div class="ms-Grid-row">
-            <div class="ms-Grid-col ms-u-sm12">
-                <span id="debug" class="ms-Table-cell"></span>
-            </div>
-        </div>
-    </div>
-
-    <!-- FabricUI component used for displaying notifications -->
-    <div class="ms-MessageBanner" style="position:absolute;bottom: 0;">
-        <div class="ms-MessageBanner-content">
-            <div class="ms-MessageBanner-text">
-                <div class="ms-MessageBanner-clipper">
-                    <div class="ms-font-m-plus ms-fontWeight-semibold" id="notificationHeader"></div>
-                    <div class="ms-font-m ms-fontWeight-semilight" id="notificationBody"></div>
-                </div>
-            </div>
-            <button class="ms-MessageBanner-expand" style="display:none"><i class="ms-Icon ms-Icon--chevronsDown"></i> </button>
-            <div class="ms-MessageBanner-action"></div>
-        </div>
-        <button class="ms-MessageBanner-close"> <i class="ms-Icon ms-Icon--x"></i> </button>
-    </div>
+    <button id="getMessage" class="ms-font-l">Get Message</button>
+    <br />
+    <br />
+    <span id="sender" class="ms-Table-cell"></span>
+    <br />
+    <span id="message" class="ms-Table-cell" contenteditable="true"></span>
+    <br />
+    <br />
+    <br />
+    <span id="debug" class="ms-Table-cell"></span>
 </body>
 </html>
