@@ -1,0 +1,2 @@
+bin\Debug\OfficeAppManifests\TakeItOnlineManifest.xml
+C:\GitHub\Outlook-add-in-integration-with-StackOverflow\TakeItOnline\TakeItOnline\bin\Debug\TakeItOnline.debugapp
